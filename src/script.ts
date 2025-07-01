@@ -17,8 +17,8 @@ export {};
 // 3+. Ajoutez un écouteur d'événement "keydown" sur le document `document.addEventListener()`.
 //     > Regarder `js keydown event` sur Google
 
-// 4. Lorsqu'une touche du tableau est pressée :
-//    - Affichez un message dans la console du type : "La touche X a été pressée !"
+// 4+. Lorsqu'une touche du clavier est pressée, vérifiez qu'elle fait partie des touches du piano :
+//    - Si c'est le cas affichez un message dans la console du type : "La touche X a été pressée !"
 //
 // Bonus :
 // - Changez la couleur du bouton correspondant (par exemple : passez-le en jaune pendant 300 ms).
