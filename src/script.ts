@@ -5,13 +5,18 @@ export {};
 // ========================================================================
 // Objectif : Réagir aux touches du clavier et jouer un son ou afficher un message.
 //
-// 0. Sélectionnez la div prévue pour cet exercice grâce à son id "pianoContainer".
-// 1. Créez un tableau contenant les touches du clavier que vous souhaitez utiliser (exemple : ["a", "z", "e", "r", "t", "y"]).
-// 2. À l'aide d'une boucle, pour chaque touche du tableau :
-//    - Créez un bouton (élément HTMLButtonElement).
-//    - Affectez-lui comme texte : "Touche : X" où X est la lettre de la touche.
-//    - Ajoutez-le dans la div "pianoContainer".
-// 3. Ajoutez un écouteur d'événement "keydown" sur le document.
+// 0+. Sélectionnez la div prévue pour cet exercice grâce à son id "pianoContainer" à l'aide de getElementById
+
+// 1+. Créez un tableau contenant les touches du clavier que vous souhaitez utiliser (exemple : ["a", "z", "e", "r", "t", "y"]).
+
+// 2+. À l'aide d'une boucle foreach, parcourez le tableau contenant les touches du clavier :
+//    - Pour chaque élément, créez un bouton avec createElement.
+//    - Affectez-lui comme texte, avec innerText : "Touche : X" où X est la lettre de la touche.
+//    - Ajoutez-le dans la div "pianoContainer" avec appendChild.
+
+// 3+. Ajoutez un écouteur d'événement "keydown" sur le document `document.addEventListener()`.
+//     > Regarder `js keydown event` sur Google
+
 // 4. Lorsqu'une touche du tableau est pressée :
 //    - Affichez un message dans la console du type : "La touche X a été pressée !"
 //
