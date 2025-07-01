@@ -23,15 +23,46 @@ export {};
 // Bonus :
 // - Changez la couleur du bouton correspondant (par exemple : passez-le en jaune pendant 300 ms).
 
+const name: string = "Kévin";
+
+const exo_1_target: HTMLElement | null =
+  document.getElementById("pianoContainer");
+
+const keys: Array<string> = ["a", "z", "e", "r", "t", "y"];
+
+if (exo_1_target) {
+  keys.forEach(function (item) {
+    const button: HTMLButtonElement = document.createElement("button");
+    button.innerText = `Touche : ${item}`;
+
+    exo_1_target.appendChild(button);
+  });
+}
+
+document.addEventListener("keydown", function (event) {
+  const pressedKey: string = event.key.toLocaleLowerCase();
+
+  if (keys.includes(pressedKey)) {
+    console.log(`La touche ${pressedKey} a été pressée !`);
+  }
+});
+
 // ========================================================================
 // Exercice 2 : Déplacer un Élément avec les Flèches du Clavier
 // ========================================================================
 // Objectif : Déplacer un carré dans la page grâce aux flèches du clavier.
 //
-// 0. Sélectionnez la div prévue pour cet exercice grâce à son id "moveContainer".
-// 1. Créez un nouvel élément div que vous appellerez "square" (HTMLDivElement).
-// 2. Donnez-lui une taille de 50px par 50px, une couleur de fond et une position absolue.
-// 3. Placez-le au départ en haut à gauche du container (top: 0px, left: 0px).
+// 0+. Sélectionnez la div prévue pour cet exercice grâce à son id "moveContainer".
+// 1+. Créez un nouvel élément div dans une constante que vous appellerez "square".
+// 2+. Donnez-lui :
+//      - une width de 50px
+//      - une height de 50px
+//      - une couleur de fond
+//      - une position absolue
+// 3+. Placez-le au départ en haut à gauche du container à l'aide de style :
+//      - top: 0px
+//      - left: 0px
+
 // 4. Ajoutez cet élément dans la div "moveContainer".
 // 5. Ajoutez un écouteur d'événement "keydown" sur le document.
 // 6. Lorsqu'une des touches fléchées est pressée (ArrowUp, ArrowDown, ArrowLeft, ArrowRight) :
